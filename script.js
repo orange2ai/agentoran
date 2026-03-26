@@ -58,7 +58,7 @@
   resize();
 
   // Sparse particle field
-  const PARTICLE_COUNT = Math.min(60, Math.floor(window.innerWidth / 20));
+  const PARTICLE_COUNT = Math.min(35, Math.floor(window.innerWidth / 30));
 
   class Particle {
     constructor() {
