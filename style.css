@@ -263,42 +263,22 @@ section {
 
 /* Scroll hint */
 .hero-scroll-hint {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: clamp(20px, 3vw, 40px);
-}
-
-.hero-scroll-hint span {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--white-faint);
-}
-
-.scroll-line {
-  width: 40px;
-  height: 1px;
-  background: var(--white-faint);
-  position: relative;
-  overflow: hidden;
-}
-
-.scroll-line::after {
-  content: '';
   position: absolute;
-  left: -100%;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--orange);
-  animation: scroll-sweep 2s ease-in-out infinite;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
-@keyframes scroll-sweep {
-  0% { left: -100%; }
-  100% { left: 100%; }
+.scroll-arrow {
+  font-size: 24px;
+  color: var(--white-faint);
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(10px); opacity: 0.8; }
 }
 
 /* Big bg text */
