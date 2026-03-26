@@ -227,7 +227,7 @@ section {
 /* Name */
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(80px, 14vw, 180px);
+  font-size: clamp(100px, 18vw, 220px);
   line-height: 0.9;
   letter-spacing: 0.02em;
   display: flex;
@@ -240,10 +240,16 @@ section {
 
 .accent-line {
   color: var(--orange);
-  -webkit-text-stroke: 0px transparent;
   text-shadow:
-    0 0 40px rgba(255, 107, 0, 0.4),
-    0 0 80px rgba(255, 107, 0, 0.15);
+    0 0 60px rgba(255, 107, 0, 0.5),
+    0 0 120px rgba(255, 107, 0, 0.25),
+    0 0 200px rgba(255, 107, 0, 0.1);
+  animation: hero-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow {
+  0% { text-shadow: 0 0 40px rgba(255, 107, 0, 0.4), 0 0 80px rgba(255, 107, 0, 0.15); }
+  100% { text-shadow: 0 0 80px rgba(255, 107, 0, 0.6), 0 0 160px rgba(255, 107, 0, 0.3), 0 0 240px rgba(255, 107, 0, 0.1); }
 }
 
 /* Tagline */

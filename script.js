@@ -154,28 +154,7 @@
     }
   }, { passive: true });
 
-  /* ── 5. Hero name letter hover effect ── */
-  const heroName = document.querySelector('.hero-name');
-
-  if (heroName) {
-    heroName.style.cursor = 'default';
-
-    heroName.addEventListener('mousemove', (e) => {
-      const rect = heroName.getBoundingClientRect();
-      const relX = (e.clientX - rect.left) / rect.width;
-      const skew = (relX - 0.5) * 4;
-      heroName.style.transform = `skewX(${skew}deg)`;
-    });
-
-    heroName.addEventListener('mouseleave', () => {
-      heroName.style.transform = 'skewX(0deg)';
-      heroName.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
-    });
-
-    heroName.addEventListener('mouseenter', () => {
-      heroName.style.transition = 'transform 0.1s ease';
-    });
-  }
+  /* ── 5. Hero name — removed skew effect, keeping clean ── */
 
   /* ── 6. Work cards — orange corner accent on hover ── */
   const cards = document.querySelectorAll('.work-card');
